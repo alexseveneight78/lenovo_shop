@@ -1,0 +1,19 @@
+extends ./layouts/main-layout.pug
+block styles 
+block content
+    main 
+        h3 Add product
+        form(action="/admin/add-product", method="post")
+            label(for="title") Title
+            input(type="text", name="title")
+            hr
+            label(for="imageUrl") Image URL
+            input(type="text", name="imageUrl")
+            hr
+            label(for="price") Price
+            input(type="number", name="price")
+            hr
+            label(for="description") Description
+            textarea(cols='30', rows='10', name="description", id="description")
+            hr
+            input(type="submit", value="Add product") 

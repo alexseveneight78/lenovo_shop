@@ -1,0 +1,21 @@
+main {
+    margin: 0 3%;
+    height: 100vh;
+}
+h3 {
+    text-align: center;
+}
+
+.cards {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.card {
+    width: 31%;
+    height: auto;
+    margin: 5px;
+    background-color: #ccc;
+}
