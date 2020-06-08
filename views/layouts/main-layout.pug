@@ -11,7 +11,13 @@ html(lang="en")
         header 
             ul
                 li
-                    a(href="/") Shop
+                    a(href="/", class=(path === '/' ? 'active' : '')) Shop
                 li
-                    a(href="/admin/add-product") Add product
+                    a(href="/products", class=(path === '/products' ? 'active' : '')) Products
+                li
+                    a(href="/cart", class=(path === '/cart' ? 'active' : '')) Cart
+                li
+                    a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add product
+                li
+                    a(href="/admin/products", class=(path === '/admin/products' ? 'active' : '')) Admin products
         block content
