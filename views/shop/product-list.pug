@@ -12,6 +12,8 @@ block content
                             img(src=product.imageUrl, alt=product.imageUrl)
                         p #{product.price}
                         p #{product.description} 
-
+                        .card_actions
+                            form(action="/add-to-cart", method="POST")
+                                button.btn Add to Cart
         else 
             h3 No products added yet! 

@@ -1,3 +1,21 @@
 extends ../layouts/main-layout.pug
 block styles 
 block content
+    main 
+        h3 Shop
+        if prods.length > 0 
+            .cards 
+                each product in prods 
+                    .card 
+                        h3 #{product.title}
+                        p  
+                            img(src=product.imageUrl, alt=product.imageUrl)
+                        p #{product.price}
+                        p #{product.description} 
+                        .card_actions
+                            a(href="/admin/edit-product", class="btn") Edit 
+                            form(action="/admin/delete-product", method="POST")
+                                button(type="submit", class="btn") Delete
+
+        else 
+            h3 No products added yet! 
