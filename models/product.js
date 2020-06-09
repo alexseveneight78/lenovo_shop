@@ -23,6 +23,7 @@ module.exports = class Product {
     }
     // adding one product to all products
     save(){
+        this.id = Math.random().toString();
         getProductsFromFile(products => {
             products.push(this);
             fs.writeFile(way, JSON.stringify(products), (err) => {

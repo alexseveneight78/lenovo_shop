@@ -13,6 +13,7 @@ block content
                         p #{product.price}
                         p #{product.description} 
                         .card_actions
+                            a(href="/products/" + product.id, class="btn") Details
                             form(action="/add-to-cart", method="POST")
                                 button.btn Add to Cart
         else 
