@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 const shopRoute = require('./routes/shop');
-const adminRoute = require('./routes/admin')
+const adminRoute = require('./routes/admin');
+const errorController = require('./controllers/error')
 
 app.set('view engine', 'pug');
 app.set('views', 'views');
@@ -17,4 +18,6 @@ app.set('views', 'views');
 app.use(shopRoute.route);
 app.use('/admin', adminRoute.route)
 
-app.listen(3000)
+app.use(errorController.get404);
+
+app.listen(3000);

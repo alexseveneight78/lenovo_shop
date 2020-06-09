@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Shop
+        link(rel="stylesheet", href="/header.css")
+        link(rel="stylesheet", href="/main.css")
+        block styles
+    body(style="margin: 0; padding: 0")
+        header 
+            ul
+                li
+                    a(href="/", class=(path === '/' ? 'active' : '')) Shop
+                li
+                    a(href="/products", class=(path === '/products' ? 'active' : '')) Products
+                li
+                    a(href="/cart", class=(path === '/cart' ? 'active' : '')) Cart
+                li
+                    a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add product
+                li
+                    a(href="/admin/products", class=(path === '/admin/products' ? 'active' : '')) Admin products
+        block content
+        main 
+            h2 Page not found
