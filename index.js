@@ -1,4 +1,5 @@
 const express = require('express');
+const errorController = require('./controllers/error')
 const app = express();
 
 const path = require('path')
@@ -10,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 const shopRoute = require('./routes/shop');
 const adminRoute = require('./routes/admin');
-const errorController = require('./controllers/error')
+
 
 app.set('view engine', 'pug');
 app.set('views', 'views');
