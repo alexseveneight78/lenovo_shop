@@ -5,13 +5,13 @@ block content
         h3 Add product
         form(action="/admin/add-product", method="post")
             label(for="title") Title
-            input(type="text", name="title")
+            input(type="text", name="title", id="title")
             hr
             label(for="imageUrl") Image URL
-            input(type="text", name="imageUrl")
+            input(type="text", name="imageUrl", id="imageUrl")
             hr
             label(for="price") Price
-            input(type="number", name="price")
+            input(type="number", name="price", id="price", step="0.01")
             hr
             label(for="description") Description
             textarea(cols='30', rows='10', name="description", id="description")
