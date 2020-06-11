@@ -7,10 +7,19 @@ const path = require('path')
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
+
+const db = require('./util/database');
 
 const shopRoute = require('./routes/shop');
 const adminRoute = require('./routes/admin');
+
+// db.execute('SELECT * FROM products')
+//     .then(result => {
+//         console.log(result[1])
+//     }).catch(err => {
+//     console.log(err)
+// });
 
 
 app.set('view engine', 'pug');
