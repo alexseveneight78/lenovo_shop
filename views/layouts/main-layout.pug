@@ -22,6 +22,9 @@ html(lang="en")
                     a(href="/admin/add-product", class=(path === '/admin/add-product' ? 'active' : '')) Add product
                 li
                     a(href="/admin/products", class=(path === '/admin/products' ? 'active' : '')) Admin products
+            ul.login_form 
+                li
+                    a(href="/login") Login
         block content
 
             //- form(action="/cart", method="post")
